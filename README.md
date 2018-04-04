@@ -1,2 +1,6 @@
 # jd_text_analysis
-used to analysis JD comments, use nlp techiques
+爬取京东上的客户评价，获取文本内容后，进行命名实体标注，标注规则见“规则”中的命名实体标注
+
+
+
+
