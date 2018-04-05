@@ -1,0 +1,20 @@
+import jieba,csv
+
+"""user jieba to cut each sentence and """
+
+def import_data():
+    cut_result=[]
+    with open ('E:/jd_text/dell_comments.csv','r')as csvreader:
+        csv_reader=csv.reader(csvreader)
+        for line in csv_reader:
+            seg_list=jieba.cut(line[5],cut_all=False)
+            cut_result.append(['/'.join(seg_list)])
+    with open ('E:/jd_text/word_for_analysis_dell.csv','w',newline="")as csvwriter:
+        csv_writer=csv.writer(csvwriter)
+        for line in cut_result:
+            csv_writer.writerow(line)
+    return cut_result
+
+import_data()
+
+
